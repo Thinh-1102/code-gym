@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <form method="get" action="simpleform.html">
+        <h1>Order Form</h1>
+        <h2>What Would you like to buy</h2>
+        <select>
+            <option value="A">A</option>
+            <option value="B (+  0.5$)">B (+  0.5$)</option>
+            <option value="C (+  0.5$)">C (+  0.5$)</option>
+        </select>
+        <br/>
+        <br/>
+        <Input type="radio" name="rd">1 - $10</Input>
+        <Input type="radio" name="rd">2 - $20</Input>
+        <Input type="radio" name="rd">3 - $3S0</Input>
+        <br/>
+        <p>Name<span style="color: red;">*</span></p>
+        <Input type="text" name="firstName" placeholder="firstName" size="15"></Input>
+        <Input type="text" name="lastName" placeholder="lastName" size="15"></Input>
+        <p>Email</p>
+        <Input type="email" size="35"></Input>
+        <p>Phone Number</p>
+        <Input type="text" size="5"></Input>
+        -
+        <Input type="text" size="5"></Input>
+        -
+        <Input type="text"size="5"></Input>
+        <br/>
+        <br/>
+        <Input type="button" name="Submit" value="Submit" ></Input>
+    </form>
+</body>
+</html>
