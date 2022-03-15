@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#table-1 {
+    width: 450px;
+}
+#table-1 .header{
+    color: #fff;
+    background-color: orangered;
+    padding: 5px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#table-1 .table1{
+    width: 100%;
+    padding-top: 5px;
+    border-collapse: separate;
+    border-spacing: 8px;
+}
+#table-1 .input-text{
+    color: blue;
+    text-align: right;
+}
+#table-1 .last{
+    margin-top: -36px;
+}
+#table-1 td{
+    color: orangered;
+}
+
+
+#table-2 {
+    width: 450px;
+}
+#table-2 .header{
+    background-color: rgb(27, 226, 226);
+    color: blue;
+    text-transform: uppercase;
+    padding: 2px 0;
+    margin-bottom: 10px;
+}
+#table-2 .tb2-form{
+    border-collapse: separate;
+    border-spacing: 10px;
+    width: 100%;
+}
+#table-2 .text{
+    color: blue;
+}
+#table-2 .input-2 {
+    padding: 2px 0;
+}
+#table-2 .input-name{
+    width: 75%;
+}
+
+#table-2 .text-adress{
+    margin-top: -5px;
+}
+#table-2 .sub-btn {
+    text-align: right
+}
