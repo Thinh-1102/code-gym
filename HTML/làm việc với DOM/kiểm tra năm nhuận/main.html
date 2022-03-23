@@ -10,78 +10,75 @@
 
 <body>
     <style>
-        #test {
-            background-color: green;
+        .check-year {
             width: 300px;
-            height: 400px;
-            margin: auto;
+            height: 230px;
+            background-color: rgba(0, 0, 0, 0.041);
+            margin: 0 auto;
+        }
+        .check-infor{
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .text{
+            color: red;
+            text-transform: uppercase;
         }
 
-        .form-input {
-            padding-top: 15px;
-        }
-
-        #input-value,
-        .text {
-            color: #fff;
-            text-align: center;
-        }
-
-        #input-value {
-            display: inline-block;
-            margin: 0 111px;
-            padding: 5px 11px;
-            cursor: pointer;
-            background-color: black;
-        }
-
-        #number-input {
-            width: 250px;
-            margin: 10px 21px;
+        .yearinput{
+            margin: 10px 0;
             font-size: 20px;
-            outline: 0;
-            padding: 2px 0 5px 10px;
+        }
+
+        .result{
+            color: red;
+            font-size: 25px;
         }
     </style>
 
-    <div id="test">
-        <form class="form-input" action="main.html">
-            <h1 class="text input">nhập số năm</h1>
-            <input type="number" name="year" placeholder="nhập số năm" id="number-input">
-            <button id="input-value" onclick="check()">kiểm tra</button>
-            <h1 class="text" id="result"></h1>
-        </form>
+    <div class="check-year">
+        <div class="check-infor">
+            <h1 class="text">nhập năm</h1>
+            <input type="number" class="yearinput" placeholder="nhập số năm">
+            <button class="check">kiểm tra</button>
+            <p class="result"></p>
+        </div>
     </div>
-  
-    
-</body>
-<script>
-    var resultText = document.querySelector('.input')
-    var numberInput = document.getElementById('number-input');
-    var yearInput;
-    var result = document.getElementById('result')
-    resultText.addEventListener('onkeydown', function () {
-        yearInput = parseInt(resultText.value)
-    })
-    function check() {
-        if(yearInput % 4 == 0){
-            if(yearInput % 100 !== 0){
-                // result.innerHTML = 'là năm nhuận'
-                console.log('a')
-            }else if(yearInput % 400 == 0){
-                // result.innerHTML = 'là năm nhuận'
-                console.log('a')
 
-            }else{
-                // result.innerHTML = 'không phải là năm nhuận'
-                console.log('b')
 
+    <script>
+        var yearInput = document.querySelector('.yearinput');
+        var yearInputValue;
+        var checkBtn = document.querySelector('.check');
+        var resultOutput = document.querySelector('.result')
+        var outPut;
+        yearInput.addEventListener('change', function () {
+            yearInputValue = parseInt(yearInput.value);
+        })
+        checkBtn.onclick = function () {
+            if (yearInputValue % 4 == 0) {
+                if (yearInputValue % 100 !== 0) {
+                    outPut = 'năm nhuận'
+                } else if (yearInputValue % 400 == 0) {
+                    outPut = 'năm nhuận'
+
+                } else {
+                    outPut = 'không phải năm nhuận'
+                }
+            } else {
+                outPut = 'không phải năm nhuận'
             }
-        }else{
-            // result.innerHTML = 'không phải là năm nhuận'
-            console.log('b')
-
+            resultOutput.innerHTML = outPut
         }
-    }
-</script>
+
+
+
+
+
+    </script>
+</body>
+
 </html>
