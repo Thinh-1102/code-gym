@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.mg5 {
+    margin: 5px 0;
+}
+/* basic */
+.text-dsg{
+    text-align: center;
+    color: #fff;
+}
+#basic-calcu {
+    width: 300px;
+    height: 220px;
+    margin: 15px auto;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(45, 192, 81);
+    justify-content: center;
+}
+
+.basic-cal-input{
+    width: 45%;
+    font-size: 20px;
+    padding: 5px 6px;
+    outline: 0;
+    color: #fff;
+    background-color: rgb(66, 13, 110);
+    border: 0;
+}
+
+.basic-cal-btn:hover{
+    background-color: aquamarine;
+    color: red;
+}
+
+.basic-cal-btn{
+    width: 48%;
+    margin: 5px 2px;
+    font-size: 15px;
+    padding: 3px 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.basic-cal-result{
+    height: 35px;
+}
+/* power-cal */
+.dpflex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#power-calcu{
+    width: 600px;
+    height: 368px;
+    margin: 10px auto;  
+    background-color: rgb(131, 88, 10);   
+    align-items: center;
+}
+
+.calcu-2 {
+    font-size: 20px;
+    background-color: transparent;
+    width: 95%;
+    height: 86px;
+    text-align: right;
+    padding: 10px 0;
+}
+
+.scr {
+    color: #fff;
+    font-size: 25px;
+    height: 45%;
+    padding-right: 10px;
+}
+.col {
+    width: 95%;
+    height: 30px;
+    padding: 7px 0;
+}
+.btn {
+    height: 35px;
+    width: 78px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+}
+
+.btn:hover{
+    background-color: papayawhip;
+    color: rgb(3, 3, 46);
+
+}

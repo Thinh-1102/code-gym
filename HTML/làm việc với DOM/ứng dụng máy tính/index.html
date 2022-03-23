@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>all-calculator</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <div id="all-cal">
+        <div id="basic-calcu">
+            <h1 class="basic-cal-text mg5 text-dsg">Calculator</h1>
+            <div class="basic-cal-inputs mg5">
+                <input type="number" class="basic-cal-input js-num-1"></input>
+                <input type="number" class="basic-cal-input js-num-2"></input>
+            </div>
+            <div class="basic-cal-btns mg5">
+                <button class="basic-cal-btn add">Addition(+)</button>
+                <button class="basic-cal-btn sub">Subtraction(-)</button>
+                <button class="basic-cal-btn mul">Multiplication(*)</button>
+                <button class="basic-cal-btn div">Division(/)</button>
+            </div>
+            <div class="text-dsg">
+                <h1>Result Division:<p class="basic-cal-result"></p></h1>     
+            </div>
+        </div>
+        <div id="power-calcu" class="dpflex">
+            <div name="powercal" class="calcu-2 dpflex">
+                <div  class="scr-input scr"> </div>
+                <div class="scr-value scr"> </div>
+            </div>
+            <div class="col">
+                <button class="btn" onclick="rad()">Rad</button>
+                <button class="btn" onclick="space()">...</button>
+                <button class="btn" onclick="giaithua()">x!</button>
+                <button class="btn" onclick="keyclose()">)</button>
+                <button class="btn" onclick="keyopen()">(</button>
+                <button class="btn" onclick="per()">%</button>
+                <button class="btn" onclick="ac()">AC</button>
+            </div>
+
+            <div class="col">
+                <button class="btn" onclick="inv()">Inv</button>
+                <button class="btn" onclick="sin()">sin</button>
+                <button class="btn" onclick="inkey()">In</button>
+                <button class="btn" onclick="key7()">7</button>
+                <button class="btn" onclick="key8()">8</button>
+                <button class="btn" onclick="key9()">9</button>
+                <button class="btn" onclick="keyDiv()">/</button>
+            </div>
+
+            <div class="col">
+                <button class="btn" onclick="keyPi()">&#x3C0;</button>
+                <button class="btn" onclick="cos()">cos</button>
+                <button class="btn" onclick="keyLog()">log</button>
+                <button class="btn" onclick="key4()">4</button>
+                <button class="btn" onclick="key5()">5</button>
+                <button class="btn" onclick="key6()">6</button>
+                <button class="btn" onclick="keyMul()">*</button>
+            </div>
+
+            <div class="col">
+                <button class="btn" onclick="keyE()">e</button>
+                <button class="btn" onclick="tan()">tan</button>
+                <button class="btn" onclick="keyCan2()">&#x221A;</button>
+                <button class="btn" onclick="key1()">1</button>
+                <button class="btn" onclick="key2()">2</button>
+                <button class="btn" onclick="key3()">3</button>
+                <button class="btn" onclick="keySub()">-</button>
+            </div>
+
+            <div class="col">
+                <button class="btn" onclick="key5()">Ans</button>
+                <button class="btn" onclick="keyExp()">EXP</button>
+                <button class="btn" onclick="keySup()">x<sup>y</sup></button>
+                <button class="btn" onclick="key0()">0</button>
+                <button class="btn" onclick="keyTen()">.</button>
+                <button class="btn" onclick="EqualKey()">=</button>
+                <button class="btn" onclick="keyAdd()">+</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

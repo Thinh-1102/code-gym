@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra số chẵn</title>
+</head>
+
+<body>
+    <p>Nhập số</p>
+    <form action="index.html">
+        <input type="number" id="number-input">
+        <button  onclick="test()">kiểm tra</button>
+    </form>
+    <script>
+        function test() {
+            let myInput = document.getElementById("number-input");
+            let numberValue = myInput.value;
+            if(numberValue % 2 == 0){
+                alert('đây là số chẵn')
+            }else{
+                alert('đây là số lẻ')
+            }
+        }
+    </script>
+</body>
+
+</html>

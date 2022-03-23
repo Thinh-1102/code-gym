@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị đầu ra</title>
+</head>
+<body>
+    <!-- 1 -->
+    <button onclick="showAlert()">Click me!</button>
+    <!-- 2 -->
+    <p id="show-message">hello</p>
+    <button onclick="newMessage()">Click me!</button>
+    <br/>
+    <!-- 3 -->
+    <button onclick="showDocument()">Click me!</button>
+    <br/>
+    <button onclick="showConsole()">Click me!</button>
+    <script>
+        function showAlert(){
+            alert('hello!')
+        }
+        var showMessage = document.getElementById('show-message');
+        function newMessage() {
+            showMessage.innerHTML = 'bye bye'
+        }
+        function showDocument() {
+            document.write('hello')
+        }
+        function showConsole (){
+            console.log('hết bài 4')
+        }
+    </script>
+</body>
+</html>
