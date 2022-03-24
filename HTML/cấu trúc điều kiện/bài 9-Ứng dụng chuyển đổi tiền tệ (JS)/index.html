@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng chuyển đổi tiền tệ (JS)</title>
+</head>
+
+<body>
+    <style>
+        .main {
+            background-color: bisque;
+            height: 250px;
+            width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .cow {
+            padding: 3% 5%;
+            font-size: 20px;
+        }
+
+        .left {
+            width: 50%;
+        }
+
+        .text {
+            text-align: center;
+        }
+
+        .right {
+            width: 20%;
+        }
+
+        .input,
+        #from-currency,
+        #to-currency {
+            width: 100%;
+            padding: 3px 0;
+            font-weight: bold;
+        }
+
+        .btn {
+            width: 92px;
+            height: 29px;
+            font-size: 17px;
+            color: blue;
+            cursor: pointer;
+        }
+
+        .result {
+            width: 90%;
+            height: 40px;
+            background-color: aqua;
+            margin: 5px 0;
+            line-height: 40px;
+            padding-left: 10px;
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <div class="main">
+        <div class="form">
+            <div class="cow left">
+                <p class="text">Amount</p>
+                <input type="number" class="input">
+            </div>
+            <div class="cow right">
+                <p class="text">From Currency</p>
+                <select id="from-currency">
+                    <option class="opt" value="VietNamDong">VietNam</option>
+                    <option class="opt" value="USD">USD</option>
+                    <option class="opt" value="Euro">Euro</option>
+                    <option class="opt" value="Pound">Pound</option>
+                    <option class="opt" value="Yen">Yen</option>
+                </select>
+            </div>
+            <div class="cow right">
+                <p class="text">To Currency</p>
+                <select id="to-currency">
+                    <option class="opt" value="VietNamDong">VietNam</option>
+                    <option class="opt" value="USD">USD</option>
+                    <option class="opt" value="Euro">Euro</option>
+                    <option class="opt" value="Pound">Pound</option>
+                    <option class="opt" value="Yen">Yen</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn" onclick="btn()">change</button>
+        <p class="result"></p>
+    </div>
+
+    <script>
+        var toVietNam = {
+            VietNamDong: 1,
+            USD: 22710,
+            Euro: 24570.16,
+            Pound: 29574.70,
+            Yen: 183.71,
+        }
+        // var btn = document.querySelector('.btn')
+        var input = document.querySelector('.input');
+        var inputValue;
+        var result = document.querySelector('.result')
+        input.addEventListener('change', function () {
+            inputValue = input.value
+        })
+        function btn() {
+            var fromCurrency = document.getElementById("from-currency").value;
+            var toCurrency = document.getElementById("to-currency").value;
+            var from = toVietNam[fromCurrency];
+            var to = toVietNam[toCurrency];
+            var a = Number(inputValue) * from / to
+            result.innerHTML = inputValue + fromCurrency + " đổi ra là " + a + toCurrency
+        }
+    </script>
+</body>
+
+</html>

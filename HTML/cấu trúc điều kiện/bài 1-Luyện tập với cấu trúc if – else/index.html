@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập với cấu trúc if – else</title>
+</head>
+<body>
+    <style>
+        .content{
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: bisque;
+        }
+        .input-text{
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .output {
+            font-size: 20px;
+        }
+    </style>
+    <div class="content">
+        <p class="header">What is the “official” name of JavaScript?</p>
+        <input type="text" class="input-text">
+        <button class="check">check</button>
+        <p class="output"></p>
+    </div>
+    <script>
+        var input = document.querySelector('.input-text');
+        var checkBtn = document.querySelector('.check');
+        var result;
+        var inputValue
+        var outputValue = document.querySelector('.output')
+        var x= 'ECMAScript'
+        input.addEventListener('change',function (){
+            inputValue = input.value;
+        })
+        checkBtn.onclick = function(){
+            if(inputValue == x){
+                result = 'Right'
+            } else{
+                result = 'Didnt know? ECMAScript!'
+            }
+            outputValue.innerHTML = result
+        }
+
+    </script>
+</body>
+</html>

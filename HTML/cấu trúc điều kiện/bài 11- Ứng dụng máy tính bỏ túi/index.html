@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng máy tính bỏ túi</title>
+</head>
+
+<body>
+    <style>
+        .gray {
+            background-color: #999999;
+        }
+
+        .orange {
+            background-color: #FFBF00;
+        }
+
+        .graya-op {
+            background-color: #454545;
+        }
+
+        .calculator {
+            margin: 0 auto;
+            height: 350px;
+            width: 245px;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input-value {
+            width: 90%;
+            height: 60px;
+            background-color: transparent;
+            border: 0;
+            color: #fff;
+            outline: 0;
+            font-size: 25px;
+            font-weight: bolder;
+            margin-bottom: 10px;
+        }
+
+        .cow {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            row-gap: 10px;
+            margin: 0 -5px;
+        }
+
+        .key {
+            width: 45px;
+            height: 45px;
+            margin: 5px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 45px;
+            font-size: 25px;
+            color: #fff;
+        }
+    </style>
+    <form name="calculator" class="calculator">
+        <input type="text" name="input" class="input-value">
+        <div class="cow">
+            <span class="key gray" onclick="document.calculator.input.value += '1'">1</span>
+            <span class="key gray" onclick="document.calculator.input.value += '2'">2</span>
+            <span class="key gray" onclick="document.calculator.input.value += '3'">3</span>
+            <span class="key orange" onclick="document.calculator.input.value += '+'">+</span>
+        </div>
+        <div class="cow">
+            <span class="key gray" onclick="document.calculator.input.value += '4'">4</span>
+            <span class="key gray" onclick="document.calculator.input.value += '5'">5</span>
+            <span class="key gray" onclick="document.calculator.input.value += '6'">6</span>
+            <span class="key orange" onclick="document.calculator.input.value += '-'">-</span>
+        </div>
+        <div class="cow">
+            <span class="key gray" onclick="document.calculator.input.value += '7'">7</span>
+            <span class="key gray" onclick="document.calculator.input.value += '8'">8</span>
+            <span class="key gray" onclick="document.calculator.input.value += '9'">9</span>
+            <span class="key orange" onclick="document.calculator.input.value += '*'">x</span>
+        </div>
+        <div class="cow">
+            <span class="key graya-op" onclick="c()">C</span>
+            <span class="key gray" onclick="document.calculator.input.value += '0'">0</span>
+            <span class="key graya-op"
+                onclick="document.calculator.input.value = eval(document.calculator.input.value)">=</span>
+            <span class="key orange" onclick="document.calculator.input.value += '/'">/</span>
+        </div>
+    </form>
+    <script>
+        function c() {
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>

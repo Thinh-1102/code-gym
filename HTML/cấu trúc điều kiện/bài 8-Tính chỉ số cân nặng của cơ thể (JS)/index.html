@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính chỉ số cân nặng của cơ thể (JS)</title>
+</head>
+<body>
+    <style>
+        .flex{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .form{
+           
+            height: 250px;
+            width: 400px;
+            margin: 0 auto;
+            background-color: rgb(224, 18, 163);  
+        }
+        .input{
+            width: 100%;
+            padding: 0 10px;
+        }
+        .input-value{
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        .btn{
+            padding: 5px 10px;
+            font-size: 20px;
+        }
+        .result{
+            height: 15px;
+            width: 100%;
+            line-height: 15px;
+            font-size:30px;
+            text-align: center;
+        }
+    </style>
+    <div class="form flex">
+        <h1 class="header">BMI (Body mass index)</h1>
+        <div class="input flex">
+            <input class="input-value weight" placeholder="nhập cân nặng" type="number">
+            <input class="input-value hight" placeholder="nhập chiều cao" type="number">
+        </div>
+        <button class="btn">check</button>
+        <h1 class="result"></h1>
+    </div>
+
+    <script>
+        var weightValue = document.querySelector('.weight');
+        var highValue = document.querySelector('.hight');
+        var weightValueNum,highValueNum;
+        var btn = document.querySelector('.btn');
+        var result = document.querySelector('.result');
+        var x;
+        weightValue.addEventListener('change',function(){
+            weightValueNum = Number(weightValue.value);
+        })
+        highValue.addEventListener('change',function(){
+            highValueNum = Number(highValue.value);
+        })
+       
+        btn.onclick = function(){
+            var Bmi = weightValueNum/(Math.pow(highValueNum,2))
+            if(Bmi < 16){
+                x = 'Gầy độ III'
+            } else if(Bmi >= 16 && Bmi < 17){
+                x = 'Gầy độ II'
+            } else if (Bmi >= 17 && Bmi < 18.5){
+                x = 'Gầy độ I'
+            } else if (Bmi >= 18.5 && Bmi < 25){
+                x = 'Bình thường'
+            } else if (Bmi >= 25 && Bmi < 30){
+                x = 'thừa cân'
+            }else if (Bmi >= 30 && Bmi < 35){
+                x = 'Béo phì độ 1'
+            }else if (Bmi >= 35 && Bmi < 40){
+                x = 'Béo phì độ 2'
+            }else if (Bmi > 40){
+                x = 'Béo phì độ 3'
+            }
+            console.log(Bmi)
+            result.innerHTML = x;
+        }
+
+    </script>
+</body>
+</html>

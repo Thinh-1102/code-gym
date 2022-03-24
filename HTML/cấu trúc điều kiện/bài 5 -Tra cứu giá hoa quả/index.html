@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra cứu giá hoa quả</title>
+</head>
+
+<body>
+    <style>
+        #item-price {
+            min-height: 300px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+            background-color: brown;
+        }
+
+        .text {
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .item-input {
+            margin-bottom: 15px;
+            font-size: 20px;
+            border: 0;
+            padding: 5px 10px;
+        }
+
+        .item-button {
+            font-size: 16px;
+            padding: 5px 15px;
+        }
+
+        .price-output {
+            height: 35px;
+            width: 83%;
+            background-color: rgb(13, 197, 74);
+            padding: 0 5px;
+        }
+    </style>
+
+    <div id="item-price">
+        <h1 class="text">Giá hoa quả</h1>
+        <input type="text" class="item-input">
+        <button class="item-button">xem giá</button>
+        <h1 class="text price-output"></h1>
+
+    </div>
+
+    <script>
+        var item = {
+            "Ổi": '20000 VNĐ/kg',
+            'Dưa Hấu': '20000 VNĐ/kg',
+            'Táo': '30000 VNĐ/kg',
+            'Xoài': '30000 VNĐ/kg',
+            'Cam': '40000 VNĐ/kg',
+            'Chôm Chôm': '40000 VNĐ/kg',
+            'Măng Cụt': '50000 VNĐ/kg'
+        }
+        var itemInput = document.querySelector('.item-input');
+        var itemButton = document.querySelector('.item-button');
+        var priceOutput = document.querySelector('.price-output');
+        var itemInputValue;
+        itemInput.addEventListener('change', function () {
+            itemInputValue = itemInput.value;
+        })
+        itemButton.onclick = function () {
+            var result = item[itemInputValue];
+            if (!result) {
+                priceOutput.innerHTML = 'xin vui lòng nhập lại'
+            } else {
+                priceOutput.innerHTML = result;
+            }
+            priceOutput.innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

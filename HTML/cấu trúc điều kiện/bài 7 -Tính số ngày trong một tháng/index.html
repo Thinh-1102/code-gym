@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính số ngày trong một tháng</title>
+</head>
+
+<body>
+    <style>
+        .main{
+            background-color: bisque;
+            height: 200px;
+            width: 250px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn{
+            margin-top: 15px;
+        }
+
+        .result{
+            height: 30px;
+        }
+    </style>
+
+    <div class="main">
+        <h1 class="text">nhập số tháng</h1>
+        <input type="number" class="input">
+        <button class="btn">kiểm tra</button>
+        <p class="result"></p>
+    </div>
+
+    <script>
+        var input = document.querySelector('.input');
+        var btn = document.querySelector('.btn');
+        var result = document.querySelector('.result');
+        var inputvalue, resultText;
+        input.onchange = function () {
+            inputvalue =Number(input.value);    
+        }
+        btn.onclick = function () {
+            switch (inputvalue) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    resultText = '31 ngày';
+                break;
+                case 1:
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    resultText = '30 ngày';
+                break;
+                case 2:
+                    resultText = '28 hoặc 29 ngày'
+                }
+                result.innerHTML = resultText
+        }
+    </script>
+</body>
+
+</html>
