@@ -63,10 +63,10 @@
         <div class="row">
             <p class="text">Khu vực</p>
             <select class="input-option">
-                <option class="option-form" value="KV1">KV1</option>
-                <option class="option-form" value="KV2">KV2</option>
-                <option class="option-form" value="KV2-NT">KV2-NT</option>
-                <option class="option-form" value="KV3">KV3</option>
+                <option class="option-form" value="0.75">KV1</option>
+                <option class="option-form" value="0.5">KV2</option>
+                <option class="option-form" value="0.25">KV2-NT</option>
+                <option class="option-form" value="0">KV3</option>
             </select>
         </div>
         <button class="btn">tổng</button>
@@ -79,25 +79,11 @@
         var total;
         
         btn.onclick = function () {
-            var optionForm = document.querySelector('.input-option').value;
-            switch (optionForm) {
-                case "KV1":
-                    total = 0.75;
-                    break;
-                case "KV2":
-                    total = 0.5;
-                    break;
-                case "KV2-NT":
-                    total = 0.25;
-                    break;
-                case "KV3":
-                    total = 0;
-                    break;
-            }
+            var total = Number(document.querySelector('.input-option').value);
             for (var i = 0; i < inputForms.length; i++) {
-                total = parseInt(inputForms[i].value) + total;
-                console.log(total)
+                total += parseInt(inputForms[i].value);
             }
+            console.log(total)
         }
 
     </script>

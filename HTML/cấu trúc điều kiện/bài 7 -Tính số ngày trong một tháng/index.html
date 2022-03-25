@@ -10,7 +10,7 @@
 
 <body>
     <style>
-        .main{
+        .main {
             background-color: bisque;
             height: 200px;
             width: 250px;
@@ -21,11 +21,11 @@
             align-items: center;
         }
 
-        .btn{
+        .btn {
             margin-top: 15px;
         }
 
-        .result{
+        .result {
             height: 30px;
         }
     </style>
@@ -43,7 +43,7 @@
         var result = document.querySelector('.result');
         var inputvalue, resultText;
         input.onchange = function () {
-            inputvalue =Number(input.value);    
+            inputvalue = Number(input.value);
         }
         btn.onclick = function () {
             switch (inputvalue) {
@@ -55,18 +55,18 @@
                 case 10:
                 case 12:
                     resultText = '31 ngày';
-                break;
+                    break;
                 case 1:
                 case 4:
                 case 6:
                 case 9:
                 case 11:
                     resultText = '30 ngày';
-                break;
+                    break;
                 case 2:
                     resultText = '28 hoặc 29 ngày'
-                }
-                result.innerHTML = resultText
+            }
+            result.innerHTML = resultText
         }
     </script>
 </body>

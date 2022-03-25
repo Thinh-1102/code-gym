@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,19 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 </head>
+
 <body>
     <div id="wrapper">
-        <form action="" class="login-form" >
+        <form action="" class="login-form">
             <h1 class="form-header">Đăng nhập</h1>
             <div class="input-group">
-                <i class="fa-solid fa-calendar-circle-user"></i>  
-                <input type="text" required="" autocomplete="on" class="input-form acc-name" placeholder="Tên đăng nhập">
+                <i class="fa-solid fa-calendar-circle-user"></i>
+                <input type="text" required="" autocomplete="on" class="input-form acc-name"
+                    placeholder="Tên đăng nhập">
             </div>
             <div class="input-group">
-                <input type="password" class="input-form acc-pass" autocomplete="current-password" placeholder="Mật khẩu">
+                <input type="password" class="input-form acc-pass" autocomplete="current-password"
+                    placeholder="Mật khẩu">
             </div>
             <input type="submit" class="submit-form" value="Đăng nhập">
             <p class="result"></p>
@@ -25,35 +29,37 @@
     </div>
 
 </body>
-    <script>
-        var accName = document.querySelector('.acc-name');
-        var accPass = document.querySelector('.acc-pass');
-        var submitForm = document.querySelector('.submit-form');
-        var accNameValue,accPassValue,message;
-        accName.addEventListener('change', function(){
-            accNameValue = accName.value;
-        })
-        accPass.addEventListener('change', function(){
-            accPassValue = accPass.value;
-        })
-        var result = document.querySelector('.result');
+<script>
+    var accName = document.querySelector('.acc-name');
+    var accPass = document.querySelector('.acc-pass');
+    var submitForm = document.querySelector('.submit-form');
+    var accNameValue, accPassValue, message;
+    accName.addEventListener('change', function () {
+        accNameValue = accName.value;
+    })
+    accPass.addEventListener('change', function () {
+        accPassValue = accPass.value;
+    })
+    var result = document.querySelector('.result');
 
-        submitForm.onclick = function(){
-            // event.preventDefault()
-            if (accNameValue == 'Admin'){
-            if(accPassValue == "TheMaster"){
+    submitForm.onclick = function (event) {
+        event.preventDefault()
+        if (accNameValue == 'Admin') {
+            if (accPassValue == "TheMaster") {
                 message = "Welcome"
-            }else if(accPassValue == ""){
+            } else if (accPassValue == "") {
                 message = "Canceled"
-            }else{
+            } else {
                 message = "Wrong password"
             }
-        }else if(accNameValue == ''){
+        } else if (accNameValue == '') {
             message = "canceld"
-        }else{
+        } else {
             message = "I don’t know you"
         }
-        alert(message)
-        }
-    </script>
+        console.log(message)
+        // console.log(event)
+    }
+</script>
+
 </html>

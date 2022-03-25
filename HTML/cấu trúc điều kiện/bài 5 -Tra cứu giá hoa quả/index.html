@@ -39,7 +39,7 @@
         }
 
         .price-output {
-            height: 35px;
+            height: 40px;
             width: 83%;
             background-color: rgb(13, 197, 74);
             padding: 0 5px;
@@ -48,39 +48,44 @@
 
     <div id="item-price">
         <h1 class="text">Giá hoa quả</h1>
-        <input type="text" class="item-input">
+        <input type="text" class="item-input" onkeyup="inputValue()">
         <button class="item-button">xem giá</button>
         <h1 class="text price-output"></h1>
 
     </div>
 
     <script>
-        var item = {
-            "Ổi": '20000 VNĐ/kg',
-            'Dưa Hấu': '20000 VNĐ/kg',
-            'Táo': '30000 VNĐ/kg',
-            'Xoài': '30000 VNĐ/kg',
-            'Cam': '40000 VNĐ/kg',
-            'Chôm Chôm': '40000 VNĐ/kg',
-            'Măng Cụt': '50000 VNĐ/kg'
+
+        var itemInput;
+        function inputValue() {
+            itemInput = document.querySelector('.item-input').value.toLowerCase();
+            // console.log(itemInput)
         }
+        var result;
         var itemInput = document.querySelector('.item-input');
         var itemButton = document.querySelector('.item-button');
-        var priceOutput = document.querySelector('.price-output');
-        var itemInputValue;
-        itemInput.addEventListener('change', function () {
-            itemInputValue = itemInput.value;
-        })
+        var priceOutput = document.querySelector('.price-output')
         itemButton.onclick = function () {
-            var result = item[itemInputValue];
-            if (!result) {
-                priceOutput.innerHTML = 'xin vui lòng nhập lại'
-            } else {
-                priceOutput.innerHTML = result;
+            switch (true) {
+                case (itemInput == 'ổi' || itemInput == 'oi'):
+                case (itemInput == 'dưa hấu' || itemInput == 'dua hau'):
+                    priceOutput.innerHTML = '20,000VND'
+                    break;
+                case (itemInput == 'táo' || itemInput == 'tao'):
+                case (itemInput == 'xoài' || itemInput == 'xoai'):
+                    priceOutput.innerHTML = '30,000VND'
+                    break;
+                    case (itemInput == 'cam'):
+                    case (itemInput == 'chôm chôm' || itemInput == 'chom chom'):
+                    priceOutput.innerHTML = '40,000VND'
+                    break;
+                case (itemInput == 'măng cụt' || itemInput == 'mang cut'):
+                    priceOutput.innerHTML = '50,000VND'
+                    break;
+                    default:
+                    priceOutput.innerHTML = 'nhập lại'
             }
-            priceOutput.innerHTML = result;
         }
     </script>
 </body>
-
 </html>

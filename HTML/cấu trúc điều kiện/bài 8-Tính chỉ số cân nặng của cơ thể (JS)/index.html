@@ -69,22 +69,21 @@
             var Bmi = weightValueNum/(Math.pow(highValueNum,2))
             if(Bmi < 16){
                 x = 'Gầy độ III'
-            } else if(Bmi >= 16 && Bmi < 17){
+            } else if(Bmi < 17){
                 x = 'Gầy độ II'
-            } else if (Bmi >= 17 && Bmi < 18.5){
+            } else if (Bmi < 18.5){
                 x = 'Gầy độ I'
-            } else if (Bmi >= 18.5 && Bmi < 25){
+            } else if (Bmi < 25){
                 x = 'Bình thường'
-            } else if (Bmi >= 25 && Bmi < 30){
+            } else if (Bmi < 30){
                 x = 'thừa cân'
-            }else if (Bmi >= 30 && Bmi < 35){
+            }else if (Bmi < 35){
                 x = 'Béo phì độ 1'
-            }else if (Bmi >= 35 && Bmi < 40){
+            }else if (Bmi < 40){
                 x = 'Béo phì độ 2'
-            }else if (Bmi > 40){
+            }else{
                 x = 'Béo phì độ 3'
             }
-            console.log(Bmi)
             result.innerHTML = x;
         }
 
