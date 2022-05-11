@@ -1,0 +1,168 @@
+/* nav css */
+.nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav__right,
+.nav__left {
+    display: flex;
+    align-items: center;
+}
+
+.nav__left-logo {}
+
+.menu {
+    display: flex;
+    line-height: 48px;
+    list-style: none;
+    position: relative;
+}
+
+.menu__item:hover .menu__item-link{
+    background-color: #fff;
+    color: #c1a250;
+}
+
+.menu__item-link {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0 12px;
+}
+
+.reservations {
+    width: 140px;
+    height: 36px;
+    background-color: #c1a250;
+    color: #fff;
+    line-height: 36px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.reservations::after {
+    content: "";
+    display: block;
+    width: 140%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    -moz-transform: translateX(-150%) skew(-20deg);
+    -ms-transform: translateX(-150%) skew(-20deg);
+    -webkit-transform: translateX(-150%) skew(-20deg);
+    transform: translateX(-150%) skew(-20deg);
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.reservations:hover{
+    color: #C1A250 !important;
+    border: 1px solid #C1A250;
+}
+
+.reservations:hover:after {
+    -moz-transform: translateX(-20%) skew(-20deg);
+    -ms-transform: translateX(-20%) skew(-20deg);
+    -webkit-transform: translateX(-20%) skew(-20deg);
+    transform: translateX(-20%) skew(-20deg);
+}
+
+/* PHAN TOP CSS */
+
+.top {
+    position: relative;
+    height: 1000px;
+    background-image: url(./img/slider_img/slider.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 20% left 50%;
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+.background__text{
+    background-color: #fff;
+    color: #C1A250;
+    position: absolute;
+    bottom: 15%;
+    right: 0;
+    padding: 15px 42px;
+}
+
+.background__text-link{
+    font-weight: 500;
+    font-size: 2em;
+}
+
+.background__scroll-icon{
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.background__scroll-icon p{
+    font-size: 1.5em;
+    text-shadow:0 0 3px rgba(248, 244, 244, 0.8);
+}
+
+.background__scroll-icon i{
+    font-size: 1.6em;
+    margin-top: 15px;
+    transform: translateY(0);
+    animation: fadeDown 2s infinite;
+}
+
+@keyframes fadeDown {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(100%);
+    }
+}
+
+/* game css */
+.game{
+    height: 600px;
+    background-color: beige;
+}
+
+.game__infor{
+    width: 95%;
+    margin: auto;
+    display: flex;
+}
+
+.game__infor--heading{
+    display: flex;
+    width: 40%;
+}
+
+.game__infor--heading h2{
+    color: #C1A250;
+    float: left;
+    margin-right: 1em;
+}
+
+.game__infor--heading i,
+.game__infor--heading h3{
+    color: #626F7F;
+}

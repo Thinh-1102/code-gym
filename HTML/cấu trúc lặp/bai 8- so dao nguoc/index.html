@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>so dao nguoc</title>
+</head>
+<body>
+    <input type="number" class="input-number">
+    <button onclick="reverse()">click</button>
+    <script>
+        var inputNumber = document.querySelector('.input-number');
+        var number;
+        inputNumber.addEventListener('change', function(){
+            number = inputNumber.value;
+        })
+        function reverse(){
+            var reverse ="";
+            for(var i = 0; i < number.length; i++){
+                reverse += number.charAt(number.length-i-1);
+            }
+            alert(reverse)
+        }
+    </script>
+</body>
+</html>

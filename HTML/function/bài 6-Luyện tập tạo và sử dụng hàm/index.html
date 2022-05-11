@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="btn1()">bài tập 1</button>
+    <button onclick="btn2()">bài tập 2</button>
+    <button onclick="btn3()">bài tập 3</button>
+    <button onclick="btn4()">bài tập 4</button>
+    <button onclick="btn5()">bài tập 5</button>
+    <button onclick="btn6()">bài tập 6</button>
+    <button onclick="btn7()">bài tập 7</button>
+    <button onclick="btn8()">bài tập 8</button>
+    <button onclick="btn9()">bài tập 9</button>
+    <button onclick="btn10()">bài tập 10</button>
+    <script>
+        function btn1(num1, num2) {
+            var num1 = Number(prompt('nhập số thứ nhất'))
+            var num2 = Number(prompt('nhập số thứ hai'))
+            if (num1 > num2) {
+                alert(`hiệu của hai số là ${num1 - num2}`)
+            } else {
+                alert(`tổng của hai số là ${num1 + num2}`)
+            }
+        }
+
+        function btn2() {
+            var starName = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+            var starValue = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', ' Ursa Major', 'Leo'];
+            var input = prompt('nhập tên vì sao');
+            function getStarValueByName(input) {
+                if (starName.includes(input)) {
+                    var valueOutput = starName.indexOf(input);
+                    alert(`giá trị của chòm sao bạn muốn tìm là ${starValue[valueOutput]}`)
+                } else {
+                    alert('không tìm thấy nhóe :(')
+                }
+            }
+            getStarValueByName(input)
+        }
+        function btn3(num) {
+            var num = Number(prompt('nhập số muốn tính'));
+           return alert(`bình phương của ${num} là ${num * num}`)
+        }
+
+        function btn4(radius) {
+            var radius = Number(prompt('nhập bán kính vào nào (đơn vị cm nhé)'));
+            var area = (Math.PI * Math.sqrt(radius)).toFixed(4);
+            var circumference = (Math.PI * radius * 2).toFixed(4);
+            alert(`hình tròn bán kính ${radius} cm có chu vi là ${circumference} và diện tích là ${area}`)
+        }
+
+        function btn5(number) {
+            var number = Number(prompt('nhập số muốn tính giao thừa vào'));
+            var factorial = 1;
+            for(i = number; i >= 1; i--){
+                factorial = factorial * i
+            }
+            alert(`giao thừa của ${number} là ${factorial}`)
+        }
+
+        function btn6() {
+            var inputValue = prompt('nhập vào thử nào');
+            if(!isNaN(Number(inputValue) / 1)){
+                alert('chú mày mới nhập số đó')
+            }else{
+                alert('chú mày không nhập số à  ')
+            }
+        }
+
+        function btn7(input) {
+            var input = prompt('nhập 3 số để anh tính thử nào');
+            var inputArr = input.split(',');
+            var min = inputArr[0];
+            for(var i of inputArr){
+                if(i <= min) min =i
+            }
+            alert(`số nhỏ nhất là ${min} nè`)
+        }
+
+        function btn8(integers) {
+            var integers = Number(prompt('nhập số muốn kiểm tra vào nào'));
+            if(integers > 0 && integers % 1 == 0){
+                alert('số ' + integers + 'là số nguyên dương nhé')
+            }else{
+                alert('số ' + integers + ' không phải là số nguyên dương nhé')
+            }
+        }
+
+        function btn9(arr) {
+            var arr=[];
+            for(var i = 0; i <12; i++){
+                if(Math.random() < 0.6)arr.push((Math.random()*100).toFixed(0))
+            }
+            console.log('arr :',arr)
+            var newArr = [];
+            var arrLength = arr.length;
+            for(var j = arrLength-1; j >= 0; j--){
+                newArr.push(arr[j]);
+                arr.pop()
+            }
+            console.log('newArr:',newArr)
+        }
+
+        function btn10(longString,searchValue) {
+            var longString = prompt('nhập đoạn văn');
+            var searchValue = prompt('nhập kí tự cần tìm');
+            var count = 0;
+            var longlength = longString.length;
+            var searchLength = searchValue.length;
+            for(var i =0; i <= (longlength - searchLength); i++){
+                if(longString.substring(i,i + searchLength) == searchValue){
+                    count++
+                }
+            }
+            if(count == 0){
+                alert(`trong đoạn văn không có tìm thấy từ khóa ${searchValue}`)
+            }else{
+                alert(`đã tìm thấy ${count} lần từ khóa ${searchValue} trong đoạn văn`)
+            }
+        }
+    </script>
+</body>
+
+</html>

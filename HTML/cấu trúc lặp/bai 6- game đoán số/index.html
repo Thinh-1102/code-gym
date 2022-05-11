@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="play()">play</button>
+    <script>
+        function play(){
+            var num = Math.random().toFixed(1)*10;
+            var i = 0;
+            do {
+                i++
+                var inputNum = Number(prompt('nhập số từ 1 đến 9')) != num;
+                if(inputNum){
+                    alert('xin thử lại')
+                }else{
+                    alert('chúc mừng')
+                }
+            } while (i < 3 && inputNum);
+        }
+    </script>
+</body>
+
+</html>

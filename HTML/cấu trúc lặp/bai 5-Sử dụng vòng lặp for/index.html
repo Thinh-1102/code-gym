@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="bt1()">bt1</button>
+    <button onclick="bt2()">bt2</button>
+    <script>
+        //bt1
+        function bt1() {
+            for (var i = 1; i <= 5; i++) {
+                console.log(i)
+            }
+        }
+        //bt2
+        function bt2(){
+            var sum =0;
+            do {
+            var num = Number(prompt('nhap so'));
+            } while (num <= 0 || num % 1 != 0);
+
+            for(var i = 1;i <= num; i++){
+                sum = sum+= i;
+            }
+            console.log(sum)
+        }
+    </script>
+</body>
+
+</html>

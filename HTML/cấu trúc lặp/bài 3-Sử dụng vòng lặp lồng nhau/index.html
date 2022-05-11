@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng vòng lặp lồng nhau</title>
+</head>
+
+<body>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #table {
+            width: 620px;
+            min-height: 620px;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+            padding: 10px 0;
+        }
+
+        #table > p {
+            background-color: #000;
+            color: #fff;
+            width: 40px;
+            text-align: center;
+            height: 20px;
+            line-height: 20px;
+            border: 1px solid #fff;
+            margin: 2px 10px;
+        }
+    </style>
+
+    <button onclick="add_child()" style="width : 80px; margin-bottom : 20px">KẾT QUẢ</button>
+    <div id="table"></div>
+    
+    <script>
+        function add_child() {
+            for (var row = 1; row <= 10; row++) {
+                for (var col = row; col <= row * 10; col += row) {
+                    var tableValue = document.createElement("p");
+                    var value = document.createTextNode(col);
+                    tableValue.appendChild(value);
+                    var table = document.getElementById('table');
+                    table.appendChild(tableValue);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

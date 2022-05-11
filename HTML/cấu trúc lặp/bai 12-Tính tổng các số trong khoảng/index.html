@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng các số trong khoảng</title>
+</head>
+<body>
+    <script>
+        do {
+            var numberA = Number(prompt('nhap so A'));            
+        } while (numberA % 1 != 0);
+        do {
+            var numberB = Number(prompt('nhap so B'));            
+        } while (numberB % 1 != 0);
+        //cach1
+        // sum = ((numberA + numberB)/2)*((Math.abs(numberA - numberB))+1);
+        // alert("tong tu "+numberA+"den "+numberB+"la "+sum);
+        
+        //cach 2
+        var max,min;
+        var sum = 0;
+        if(numberA > numberB){
+            max = numberA;
+            min = numberB;
+        }else if(numberA < numberB){
+            max = numberB;
+            min = numberA;
+        }else{
+            numberA = numberB;
+            sum = numberA;
+        }
+        for(var i = min;i <= max; i++){
+                sum += i;
+            }
+        alert("tong tu "+numberA+"den "+numberB+"la "+sum);
+    </script>
+</body>
+</html>
+
+<!-- 1 2 3 4 5 =15 -->
+<!-- (5+1)/2 = 3 5-1-1 = 3 -->

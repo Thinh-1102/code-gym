@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng vòng lặp while</title>
+</head>
+
+<body>
+
+    <script>
+        //bai 1
+        var input = prompt("nhập số");
+        var total = 0;
+        while(input != -1){
+            alert(input);
+            total += Number(input);
+            input = prompt("nhập số");
+            alert("tổng là " + total)
+        }
+
+        //bai 2
+            var w = 1;
+            while(w < 100){
+                document.write("<hr width = " + w + "%>")
+                w++
+            }
+    </script>
+
+</body>
+
+</html>

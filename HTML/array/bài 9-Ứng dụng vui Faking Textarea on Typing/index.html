@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Type anthing slowly</h2>
+        <textarea id="input" name="input" rows="5" cols="33"></textarea>
+    </div>
+    <script>
+        var str = "TÔI LÀ SIÊU NHÂN NÈ !!!";
+        var strArr = str.split('');
+        var input = document.getElementById('input');        
+        var text = '';
+        input.onkeyup = function () {
+            if (strArr.length == 0) {
+                text = '';
+                str = "TÔI LÀ SIÊU NHÂN NÈ !!!"
+                strArr = str.split('');
+            } else {
+                text += strArr[0];
+                console.log(strArr.length)
+                input.value = text;
+                strArr.shift();
+                console.log(text)
+            }
+        }
+    </script>
+</body>
+
+</html>

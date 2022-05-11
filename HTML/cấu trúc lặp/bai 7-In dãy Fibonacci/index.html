@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In dãy Fibonacci</title>
+</head>
+
+<body>
+
+    <script>
+        var array = [1, 1];
+        do {
+            var num = Number(prompt('input your number (lon hon 2)'))          
+        } while (num <= 1 || num % 1 != 0);
+        while (array.length < num && num > 2) {
+            array.push(array[array.length-1]+array[array.length-2]);
+        }
+        alert("fibonacci la " + array.toString())
+    </script>
+</body>
+
+</html>

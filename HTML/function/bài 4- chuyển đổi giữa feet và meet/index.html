@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="number" onkeyup="meterFunction(this)" placeholder="nhập số meter" id="meter">
+        <input type="number" onkeyup="footFunction(this)" placeholder="nhập số foot" id="foot">
+        <h1 id="result"></h1>
+    </div>
+    <script>
+        var meter = document.querySelector('meter');
+        var foot = document.querySelector('foot');
+        var result = document.getElementById('result')
+        function meterFunction(meter) {
+            result.innerHTML = `${meter.value} meter bằng ${meter.value * 3.279} foot`;
+        }
+        function footFunction(foot) {
+            result.innerHTML = `${foot.value} foot bằng ${foot.value * 0.305} meter`;
+        }
+    </script>
+</body>
+</html>

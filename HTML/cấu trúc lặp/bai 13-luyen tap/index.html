@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="bt1()">bai tap 1</button>
+    <button onclick="bt2()">bai tap 2</button>
+    <button onclick="bt3()">bai tap 3</button>
+    <button onclick="bt4()">bai tap 4</button>
+    <button onclick="bt5()">bai tap 5</button>
+    <button onclick="bt6()">bai tap 6</button>
+    <button onclick="bt7()">bai tap 7</button>
+
+    <script>
+        function bt1() {
+            for (var i = 1; i < 100; i++) {
+                if (i == 99) {
+                    console.log('hoan thanh')
+                } else {
+                    console.log(i)
+                }
+            }
+        }
+        function bt2() {
+            do {
+                var number = Number(prompt('nhap nhiet do'));
+                if (number > 100) {
+                    alert('giam nhiet do nhap lai')
+                } else if (number < 20) {
+                    alert('tang nhiet do nhap len')
+                }
+            } while (number < 20 || number > 100);
+        }
+        function bt3() {
+            let a = 0, b = 1, max = parseInt(prompt('Bạn muốn hiển thị bao nhiêu số trong dãy Fibonacci?', 0)), div5, sum;
+            for (let i = 1; i < max; i++) {
+                if (a == 0) {
+                    document.write(a, "<br/>");
+                    document.write(b, "<br/>");
+                } else {
+                    document.write(c, "<br/>");
+                }
+                c = b + a;
+                a = b;
+                b = c;
+            }
+        }
+        function bt4() {
+            let a = 0,
+                b = 1, div5;
+            for (let i = 2; i >= 0; i++) {
+                c = b + a;
+                if (c % 5 == 0) {
+                    document.write('Tìm thấy số đầu tiên chia hết cho 5 trong dãy Fibonacci là ' + c + ', ở vị trí thứ ' + i);
+                    break;
+                }
+                a = b;
+                b = c;
+            }
+        }
+        function bt5() {
+            let a = 0,
+                b = 1, div5;
+            for (let i = 2; i >= 0; i++) {
+                c = b + a;
+                if (c % 5 == 0) {
+                    document.write('Tìm thấy số đầu tiên chia hết cho 5 trong dãy Fibonacci là ' + c + ', ở vị trí thứ ' + i);
+                    break;
+                }
+                a = b;
+                b = c;
+            }
+        }
+        function bt6() {
+            let sum = 0;
+            for (let i = 0, count = 0; i >= 0; i++) {
+                if (i % 7 == 0) {
+                    sum += i;
+                    count++;
+                    if (count == 30) break;
+                }
+            }
+            document.write('30 số đầu tiên trong dãy số tự nhiên chia hết cho 7 có tổng là: ' + sum);
+        }
+        function bt7() {
+            let a = '';
+            for (let i = 0; i <= 100; i++) {
+                if (i % 3 == 0 || i % 5 == 0) {
+                    if (i % 3 == 0) {
+                        a += 'Fizz';
+                    }
+                    if (i % 5 == 0) {
+                        a += 'Buzz';
+                    }
+                    a += '<br/>';
+                }
+                else {
+                    a += i + '<br/>';
+                }
+            }
+            document.write(a);
+        }
+    </script>
+</body>
+
+</html>

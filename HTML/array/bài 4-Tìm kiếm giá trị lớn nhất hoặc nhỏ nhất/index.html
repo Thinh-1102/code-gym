@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="array-display"></div>
+    <div class="btn-group">
+        <button class="btn-min" onclick="btnMin()">Min</button>
+        <button class="btn-max" onclick="btnMax()">Max</button>
+    </div>
+    <span class="result"></span>
+
+    <script>
+        var arrayDisplay = document.querySelector('.array-display');
+        var numberquality = prompt('bao nhieu so');
+        var result = document.querySelector('.result')
+        var numberArr = [];
+        for (var i = 1; i <= numberquality; i++) {
+            numberArr.push((Math.random() * 100).toFixed(0));
+            arrayDisplay.innerHTML = numberArr.join()
+        }
+        console.log(numberArr)
+        var min = numberArr[0];
+        var max = numberArr[0];
+        function btnMin() {
+            for (var i = 0; i < numberArr.length; i++) {
+                if (numberArr[i] < min) {
+                    min = numberArr[i];
+                }
+                result.innerHTML = 'so nho nhat la ' + min
+                console.log(min)
+            }
+        }
+        function btnMax() {
+            for (var i = 0; i < numberArr.length; i++) {
+                if (numberArr[i] > max) {
+                    max = numberArr[i]
+                    console.log(max)
+                }
+                result.innerHTML = 'so lon nhat la ' + max
+            }
+        }
+
+    </script>
+</body>
+
+</html>

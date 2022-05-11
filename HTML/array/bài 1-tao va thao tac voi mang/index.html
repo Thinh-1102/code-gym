@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Sample Screen:</h3>
+    <div class="input-group">
+        <input type="number" class="input-number">
+        <button class="btn" onclick="add()">add</button>
+        <button class="btn" onclick="dis()">display</button>
+    </div>
+    <span class="result"></span>
+
+    <script>
+        var arr = [];
+        var inputNumber = document.querySelector('.input-number');
+        var value = inputNumber.addEventListener('change',function(){
+            value = inputNumber.value;
+        })
+        var result = document.querySelector('.result');
+        function add(){
+            arr.push(value);
+            console.log(arr)
+        }
+        function dis(){
+            result.innerHTML = 'Element' + arr.length + '=' +arr[arr.length - 1]
+        }
+    </script>
+</body>
+</html>

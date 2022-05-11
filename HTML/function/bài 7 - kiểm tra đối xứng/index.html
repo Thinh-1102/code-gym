@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var stringInput = prompt('nhập một chuỗi để kiểm tra nào');
+        var arrInput = stringInput.split('')
+        var arrLength = arrInput.length;
+        var index = 0;
+        function isPalindrome(){
+            var str = '';
+            if(index > (arrLength / 2)){ 
+                return alert('đây là số cặp')
+            }
+            if(arrInput[index] == arrInput[arrLength - index]){
+                index++;
+                return isPalindrome()
+            }else{
+                return alert('đây là số tào lao')
+            }
+        }
+        isPalindrome()
+    </script>
+</body>
+
+</html>

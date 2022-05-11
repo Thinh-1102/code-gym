@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .left {
+            text-align: left;
+        }
+
+        .right {
+            text-align: right;
+        }
+    </style>
+    <p class="right">
+        *<br/>
+        **<br/>
+        ***<br/>
+        ****<br/>
+        *****<br/>
+        ******<br/>
+        *******<br/>
+        ********<br/>
+    </p>
+    <button onclick="fadeOutA()">clickme</button>
+    <button onclick="fadeOutB()">clickme</button>
+    <button onclick="fadeOutC()">clickme</button>
+    <button onclick="fadeOutD()">clickme</button>
+    <script>
+        var sen = "*"
+        function fadeOutA() {
+            let sankakua = '<p class="left">';
+            for (var i = 1; i <= 4; i++) {
+                sankakua += sen.repeat(i) + "<br/>"
+            }
+            sankakua += "</p>";
+            document.write(sankakua)
+        }
+        function fadeOutB() {
+            let sankakub = '<p class="left">';
+            for (var i = 4; i >= 1; i--) {
+                sankakub += sen.repeat(i) + "<br/>"
+            }
+            sankakub += "</p>";
+            document.write(sankakub)
+        }
+        function fadeOutC() {
+            let sankakuc = '<p class="right">';
+            for (var i = 1; i <= 4; i++) {
+                sankakuc += sen.repeat(i) + "<br/>"
+            }
+            sankakuc += "</p>";
+            document.write(sankakuc)
+        }
+        function fadeOutD() {
+            let sankakud = '<p class="right">';
+            for (var i = 4; i >= 1; i--) {
+                sankakud += sen.repeat(i) + '<br/>'
+            }
+            sankakud += '</p>';
+            document.write(sankakud)
+        }
+
+    </script>
+</body>
+
+</html>
